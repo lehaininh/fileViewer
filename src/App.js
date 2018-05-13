@@ -5,7 +5,11 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+    this.onSubmit = this.onSubmit.bind(this);
     this.onTextChange = this.onTextChange.bind(this);
+  }
+
+  onSubmit() {
   }
 
   onTextChange(e) {
@@ -28,6 +32,7 @@ class App extends Component {
             Insert JSON object
           </textarea>
         </p>
+        <button onClick={this.onSubmit}>Submit</button>
       </div>
     );
   }
