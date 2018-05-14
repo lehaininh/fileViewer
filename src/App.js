@@ -5,16 +5,16 @@ import FileViewer from "./FileViewer.js";
 
 const VALID_SAMPLE = `{
 	"files": [{
-		"name": "File 1",
-		"src": "https://i-vnexpress.vnecdn.net/2018/05/14/cong-an-q3-bao-cao-2824-152627-8509-3124-1526278042.jpg",
+    "name": "image.jpg",
+		"src": "https://i-vnexpress.vnecdn.net/2018/05/13/hiep-si-bi-dam-5076-1526225880.jpg",
 		"size": "129203"
 	}, {
-		"name": "File 1",
-		"src": "http://abc.com/file1.png",
+		"name": "audio.mp3",
+		"src": "http://tegos.kz/new/mp3_full/Imany_-_Wrong_Kind_of_War.mp3",
 		"size": "129203"
 	}, {
-		"name": "File 1",
-		"src": "http://abc.com/file1.png",
+		"name": "video.mp4",
+		"src": "http://techslides.com/demos/sample-videos/small.mp4",
 		"size": "129203"
 	}]
 }`;

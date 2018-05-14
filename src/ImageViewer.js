@@ -5,7 +5,11 @@ class ImageViewer extends Component {
   render() {
     return (
       <div>
-        <img src={this.props.file.src} />
+        <p>File name: {this.props.file.name}, file type: image</p>
+        <img src={this.props.file.src} alt={this.props.file.name}/>
+        <div>
+          <button>Download</button>
+        </div>
       </div>
     );
   }

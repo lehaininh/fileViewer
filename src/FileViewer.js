@@ -9,19 +9,19 @@ const CONFIG = require("./config.json");
 let isImageFile = file_src => {
   const src_split = file_src.split(".");
   const file_extension = src_split[src_split.length - 1];
-  return CONFIG.FILE_TYPE.IMAGE.indexOf(file_extension.toUpperCase()) != -1;
+  return CONFIG.FILE_TYPE.IMAGE.indexOf(file_extension.toUpperCase()) !== -1;
 };
 
 let isAudioFile = file_src => {
   const src_split = file_src.split(".");
   const file_extension = src_split[src_split.length - 1];
-  return CONFIG.FILE_TYPE.AUDIO.indexOf(file_extension.toUpperCase()) != -1;
+  return CONFIG.FILE_TYPE.AUDIO.indexOf(file_extension.toUpperCase()) !== -1;
 };
 
 let isVideoFile = file_src => {
   const src_split = file_src.split(".");
   const file_extension = src_split[src_split.length - 1];
-  return CONFIG.FILE_TYPE.VIDEO.indexOf(file_extension.toUpperCase()) != -1;
+  return CONFIG.FILE_TYPE.VIDEO.indexOf(file_extension.toUpperCase()) !== -1;
 };
 
 class FileViewer extends Component {
@@ -33,13 +33,11 @@ class FileViewer extends Component {
             file={file}
           />
           </div>
-      }
-      if (isAudioFile(file.src)) {
+      } else if (isAudioFile(file.src)) {
         return <div key={idx}>
           <AudioViewer file={file} />
         </div>
-      }
-      if (isVideoFile(file.src)) {
+      } else if (isVideoFile(file.src)) {
         return <div key={idx}>
           <VideoViewer file={file} />
         </div>
