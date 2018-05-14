@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ImageViewer from "./ImageViewer.js";
 import AudioViewer from "./AudioViewer.js";
 import VideoViewer from "./VideoViewer.js";
+import UnknownFileViewer from "./UnknownFileViewer.js";
 
 const CONFIG = require("./config.json");
 
@@ -40,6 +41,10 @@ class FileViewer extends Component {
       } else if (isVideoFile(file.src)) {
         return <div key={idx}>
           <VideoViewer file={file} />
+        </div>
+      } else {
+        return <div key={idx}>
+          <UnknownFileViewer file={file} />
         </div>
       }
     });

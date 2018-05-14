@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 import FileViewer from "./FileViewer.js";
 
 const VALID_SAMPLE = `{
-	"files": [{
+  "files": [
+  {
     "name": "image.jpg",
 		"src": "https://i-vnexpress.vnecdn.net/2018/05/13/hiep-si-bi-dam-5076-1526225880.jpg",
 		"size": "129203"
@@ -16,7 +17,11 @@ const VALID_SAMPLE = `{
 		"name": "video.mp4",
 		"src": "http://techslides.com/demos/sample-videos/small.mp4",
 		"size": "129203"
-	}]
+  }, {
+    "name": "ebook.pdf",
+    "src": "https://library.unimelb.edu.au/__data/assets/pdf_file/0004/1984324/Finding-and-saving-URLs-for-online-content-v20150929.pdf",
+    "size": "12345"
+  }]
 }`;
 
 class App extends Component {
@@ -73,11 +78,11 @@ class App extends Component {
           this.state.error_message &&
             <p style={{"color": "red"}}>{this.state.error_message}</p>
         }
-        <p>Paste your valid JSON object below</p>
+        <p>Paste your valid JSON object in the format below</p>
         <p className="App-intro">
           <textarea style={{"height": "500px", "width": "500px"}}
             onChange={this.onTextChange}
-            value={VALID_SAMPLE}
+            value={this.state.json_text}
           >
           </textarea>
         </p>
