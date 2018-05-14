@@ -1,0 +1,8 @@
+{
+  "FILE_TYPE": {
+    "IMAGE": ["PNG", "JPG"],
+    "VIDEO": ["MP4"],
+    "AUDIO": ["MP3"],
+    "OTHERS": ["PDF", "DOCX"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "attachments": [
+    {
+      "name": "File1",
+      "src": "http://abc.com/1.jpg",
+      "size": "123123"
+    }
+  ]
+}
